@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //面向对象思想（属性+方法）
+        //使用js的对象自变量创建一个对象
+        const dai={
+            name:"kyrie",
+            age:18,      //js中没有整数和浮点数类型
+            sex:'male',
+            hometown:"jian",
+            hobbies:["篮球","唱歌"],//js没有数组，他是数组对象
+            isSingle:true,
+//target是形参，表示接收的对象
+            sendflower(target){
+            console.log(xm.name+"收到了花");
+}
+        }
+        //声明了常量对象 对象自变量，从字面意义上就可以了解这个对象
+        const xm={
+            xq:100,
+            name:"小美",
+            age:18,
+            sex:'female',      //js中没有整数和浮点数类型
+            hobbies:["唱歌"],//js没有数组，他是数组对象
+            isSingle:true,
+    receiveFlower(sender){
+    console.log(sender.name+"送了花");
+    if(xm.xq<80){
+    console.log("gun");
+
+}
+    else{
+    console.log("好~");
+}
+}
+
+        }
+        //小红收到了花，可以对花进行不同的处理---》接口
+        const xh={ 
+             name:"小红",
+            age:18,
+            sex:'female',      //js中没有整数和浮点数类型
+            hobbies:["唱歌"],//js没有数组，他是数组对象
+            isSingle:true,
+            receiveFlower(sender){
+//                 //三个等号在js中表示恒等
+//                 if(sender.name==="kyrie"){
+//                     console.log("我喜欢你很久了，我们在一起吧");
+//                     return;
+//                 }
+// console.log(sender.name+"要我把花送给"+xm.name);
+//             },
+            setTimeout(function(){
+             xm.xq=99
+              xm.receiveFlower(sender)
+            },2000)
+        }
+        }
+    </script>
+</body>
+</html>
+
