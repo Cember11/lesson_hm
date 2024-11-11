@@ -1,0 +1,38 @@
+html{
+    height:100%;
+font-size: 10px;/*全局设置字体大小*/
+background: url('./background.jpg') bottom center no-repeat;/*底部对齐*/
+background-size: cover;/*设置背景的大小，将背景图片的大小覆盖html（盒子）大小*/
+
+    
+}
+.keys{
+    height: 100vh;/*表示100%占据*/
+    display: flex;/**/
+    flex:1;
+    align-items:center;
+    justify-content: center;
+}
+.key{
+    border :4px solid black;
+    border-radius:5px;/*间隙*/
+    margin:10px;
+    font-size: 15px;
+padding:10px 5px;
+width: 100px;
+color: white;
+background: (0,0,0,4);
+box-shadow: 0 0 5px black;
+text-align: center;
+
+
+}
+.key>div{
+    font-size: 40px;
+}
+.key>.sound{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:#ffc600;
+}

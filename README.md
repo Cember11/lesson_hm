@@ -1,2 +1,2 @@
 # lesson_hm
-ai fullstuck learning
+ai full stuck learning
