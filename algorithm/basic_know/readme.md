@@ -45,3 +45,7 @@ O(1)    O(n)     O(logn)     O(n*m)    O(n^2)     O(n^n)
     - 算法中如何定义一个数组
     [1,2,3,4,5,6,7,8]
     （new Array（7））.fill(1)
+
+    - 访问和遍历
+    arr[index]  O(1)  链表  O(n)
+    - 遍历 for foreach map
