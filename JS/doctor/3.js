@@ -1,2 +1,6 @@
 console.log(name); // undefined  变量提升
-var name = "123";
+var name;
+name= "wql"; 
+function fun(){
+
+}
