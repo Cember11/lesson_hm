@@ -20,7 +20,7 @@ const getCompletion =  async (prompt, model="gpt-3.5-turbo") => {
   const response = await client.chat.completions.create({
     model: model,
     messages: messages,
-    // LLM 生成内容的随机性
+    // LLM 生成内容的随机性s
     temperature: 0.1
   }) 
   return response.choices[0].message.content
