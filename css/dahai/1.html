@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+        p{
+            color: blue;
+        }
+        .container p{
+            color: green;
+        }
+       优先级更高
+        #main p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- id是唯一的，class是可以重复的 -->
+     <!-- attribute 属性 -->
+    <div id="main" class="container">
+        <p style="color:pink">这是一段爱情故事</p>
+
+    </div>
+    
+</body>
+</html>
