@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "谭"
+    },
+    {
+      "id": "2",
+      "name": "熊"
+    },
+    {
+      "id": "3",
+      "name": "陈"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "123",
+      "content": "我是第一篇文章的内容",
+      "user_id": 1
+    },
+    {
+      "id": "2",
+      "title": "我的第二篇文章",
+      "content": "我是第二篇文章的内容",
+      "user_id": 2
+    },
+    {
+      "id": "3",
+      "title": "我的第三篇文章",
+      "content": "我是第三篇文章的内容",
+      "user_id": 3
+    },
+    {
+      "id": 2,
+      "title": "REACT+JSON-Server全栈",
+      "content": "react  component",
+      "userId": 2
+    }
+  ]
+}

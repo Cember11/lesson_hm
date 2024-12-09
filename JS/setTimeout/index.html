@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn2">提前关闭setTimeout定时器</button>
+    <button id="btn1">关闭定时器</button>
+    <script>
+        // 卡 ，不能响应其他事件和交互， js是单线程语言
+       //异步
+       //1-5ms
+       const btn2 =document.getElementById("btn2");
+       const btn1=document.getElementById("btn1");
+       //添加事件监听
+       btn2.addEventListener("click",function() {
+        console.log("按钮被点击了,提前关闭setTimeout定时器");
+        clearTimeout(timeout);//清除定时器
+        })
+       btn1.addEventListener("click",function() { 
+        console.log("按钮被点击了");
+        clearInterval(interval);//清除定时器
+        })
+        const timeout=setTimeout(function() {
+            console.log("Hello, world!");
+        }, 1000); 
+        //同步代码
+        // while (true) {
+        //     console.log("This will be printed continuously.");
+        // }
+
+        console.log("This will be printed first.");
+        //没间隔 1s 打印一次 返回一个id 可以用clearInterval(id) 清除
+        const interval=setInterval(function() {
+            console.log("This will be printed every second.");
+        }, 1000);
+    </script>
+</body>
+</html>

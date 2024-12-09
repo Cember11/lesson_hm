@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call  bind  apply</title>
+</head>
+<body>
+    <script>
+        var obj ={
+            name:'张三',
+            func1:function(){
+                console.log(this.name)
+            },
+            func2:function(){
+                setTimeout(function(){
+                    this.func1()
+                }.bind(obj),5000)  //call 改变this指向  立即执行
+            }                      //bind 改变this指向  不立即执行
+                                   //apply 改变this指向  立即执行  与call接收参数的方式不同
+        }
+        obj.func2()
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手写定时器</title>
+</head>
+<body>
+    <script>
+ function customSetInterval(fn, time) {
+    let intervalId = null;
+    let running = true; // 引入一个标志变量来控制循环的运行状态
+
+    function loop() {
+        if (!running) {
+            return; // 如果running为false，则不继续执行循环体
+        }
+
+        intervalId = setTimeout(() => {
+            fn(); // 执行传入的函数
+
+            if (running) {
+                loop(); // 如果running仍然为true，则继续递归调用loop
+            }
+        }, time);
+    }
+
+    loop(); // 启动定时器
+
+    // 返回一个函数，用于停止循环
+    return function stop() {
+        running = false; // 将running设置为false，以停止后续的递归调用
+        if (intervalId !== null) {
+            clearTimeout(intervalId); // 清除当前正在等待的定时器（如果有的话）
+            intervalId = null; // 重置intervalId为null，表示没有正在等待的定时器
+        }
+    };
+}
+
+// 使用示例
+const stopInterval = customSetInterval(() => {
+    console.log('This message will be logged repeatedly.');
+}, 1000);
+
+// 在一段时间后停止循环
+ setTimeout(() => {
+     stopInterval();
+     console.log('The interval has been stopped.');
+ }, 5000);
+
+    </script>
+</body>
+</html>
